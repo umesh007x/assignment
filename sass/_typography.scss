@@ -1,0 +1,41 @@
+.header {
+	&__heading {
+		margin: 0 auto;
+		font-family: 'Calistoga', cursive;
+		font-size: 3.5rem;
+		@include respond(885) {
+			font-size: 3rem;
+		}
+		@include respond(610) {
+			font-size: 2.5rem;
+		}
+		@include respond(530) {
+			font-size: 2rem;
+		}
+		@include respond(380) {
+			font-size: 1.6rem;
+		}
+	}
+	&__sub-head {
+		font-size: .9rem;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		position: absolute;
+		left: 20%;
+		bottom: -1px;
+	}
+}
+.chart-heading {
+	border-bottom: 2px solid rgba(0, 0, 0, .1);
+	padding-bottom: .6rem;
+	display: flex;
+	justify-content: center;
+	&__primary {
+		font-size: 2.5rem;
+		@include respond(530) {
+			font-size: 2rem;
+		}
+		@include respond(380) {
+			font-size: 1.6rem;
+		}
+	}
+}

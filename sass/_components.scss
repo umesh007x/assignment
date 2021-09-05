@@ -1,0 +1,138 @@
+.table {
+	font-size: 1.5rem;
+	text-align: center;
+
+	&__head {
+		padding: 1rem 0;
+		border-bottom: 2px solid rgba(0, 0, 0, .1);
+	}
+	&__data {
+		padding: .8rem 0;
+	}
+}
+.chart-data {
+	text-align: center;
+}
+.doughnut {
+	width: 14rem;
+	margin: 2rem auto;
+	@include respond(885) {
+		margin: 1rem auto;
+	}
+}
+.freezer {
+	@include buttonProperty;
+	padding: 1rem;
+}
+.options {
+	@include buttonProperty;
+}
+.stats-row1__chart {
+	@include rowConfig;
+	margin-top: 5px;
+	margin-bottom: 2rem;
+
+	@include respond(1470) {
+		flex-wrap: wrap;
+	}
+
+	&--1 {
+		@include chartLayout;
+		width: 27.34rem;
+		order: 1;
+		@include respond(885) {
+			padding: 0 2rem;
+		}
+	}
+	&--2 {
+		@include chartLayout;
+		width: 27.34rem;
+
+		order: 2;
+		@include respond(885) {
+			padding: 0 2rem;
+		}
+	}
+	&--3 {
+		@include chartLayout;
+		width: 56rem;
+		border-radius: 30px;
+		order: 3;
+		@include respond(1470) {
+			order: 4;
+			margin-right: 0;
+		}
+		@include respond(530) {
+			width: 46rem;
+			padding: .6rem .8rem;
+			border-radius: 15px;
+		}
+		@include respond(380) {
+			width: 38rem;
+			padding: .3rem .4rem;
+			border-radius: 5px;
+		}
+	}
+	&--4 {
+		@include chartLayout;
+		margin-right: 0;
+		overflow-y: scroll;
+		width: 27.34rem;
+		height: 27rem;
+		order: 4;
+
+		@include respond(1470) {
+			order: 3;
+		}
+		@include respond(885) {
+			margin-right: 2rem;
+		}
+	}
+}
+.stats-row2__chart {
+	@include rowConfig;
+	@include respond(1470) {
+		flex-wrap: wrap;
+	}
+
+	&--1 {
+		@include chartLayout;
+		width: 71rem;
+		border-radius: 30px;
+		@include respond(1470) {
+			margin-right: 0;
+		}
+		@include respond(610) {
+			width: 62rem;
+		}
+		@include respond(530) {
+			width: 46rem;
+			padding: .6rem .8rem;
+			border-radius: 15px;
+		}
+		@include respond(380) {
+			width: 38rem;
+			padding: .3rem .4rem;
+			border-radius: 5px;
+		}
+	}
+	&--2 {
+		@include chartLayout;
+		width: 71rem;
+		border-radius: 30px;
+		margin-right: 0;
+		@include respond(610) {
+			width: 62rem;
+		}
+		@include respond(530) {
+			width: 46rem;
+			padding: .6rem .8rem;
+			border-radius: 15px;
+		}
+		@include respond(380) {
+			width: 38rem;
+			padding: .3rem .4rem;
+			border-radius: 5px;
+		}
+	}
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@800&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- EXTERNAL STYLESHEET -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- CHART.JS LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Admin_panel</title>
+</head>
+<body>
+
+  <!-- HEADER -->
+    <div class="header">
+       <div class="header__logo"><i class="fas fa-bolt"></i>Electric <span class="header__sub-head">Smart Engineering</span> </div>
+       <h1 class="header__heading">Freezer Tempreture Monitoring System</h1>
+    </div>
+
+
+
+  <!-- MAIN CONTENT -->
+    
+    <div class="container">
+      <select id="freezer" class="freezer">
+        <option value="Freezer 1">Freezer 1</option>
+        <option value="Freezer 2">Freezer 2</option>
+        <option value="Freezer 3">Freezer 3</option>
+        <option value="Freezer 4">Freezer 4</option>
+      </select>
+  <!-- CHARTS SECTION -->
+      <div class="stats">
+
+    <!-- FIRST CHARTS ROW  -->
+         <div class="stats-row1__chart">
+
+         <!-- FIRST BAR CHART  -->
+            <div class="stats-row1__chart--1">
+               <div class="chart-heading">
+                  <h3 class="chart-heading__primary">Temperature</h3>
+               </div>
+               <canvas id="doughnut1" class="doughnut"  aria-label="chart" role="img"  ></canvas>
+               <h3 class="chart-data">70</h3>
+            </div>
+
+
+
+          <!-- SECOND BAR CHART  -->
+          <div class="stats-row1__chart--2">
+               <div class="chart-heading">
+                  <h3 class="chart-heading__primary">Current</h3>
+               </div>
+               <canvas id="doughnut2" class="doughnut"  aria-label="chart" role="img"  ></canvas>
+               <h3 class="chart-data">60</h3>
+          </div>
+         <!-- SECOND BAR CHART  -->
+
+         <!-- CURRENT CONSUMPTION LINE CHART -->
+          <div class="stats-row1__chart--3">
+               <div class="chart-heading">
+                 <h3 class="chart-heading__primary"> Current Consumption</h3> 
+                    <select id="freezer" class="options">
+                        <option value="Freezer 1">10min</option>
+                        <option value="Freezer 2">20min</option>
+                        <option value="Freezer 3">30min</option>
+                        <option value="Freezer 4">40min</option>
+                    </select>
+               </div>
+               <canvas id="lineChart1" class="lineChart1" height="200"  aria-label="chart" role="img"  ></canvas>
+          </div>
+  
+
+
+        <!-- SCHEDULE ALERT BOX -->
+          <div class="stats-row1__chart--4">
+            <div class="chart-heading">
+              <h3 class="chart-heading__primary">Alert</h3> 
+            </div>
+              <table class="table">
+                  <tr >
+                    <th class="table__head">Date</th>
+                    <th class="table__head">Events</th>
+                  </tr>
+                  <tr>
+                    <td class="table__data">12 May 2020 at 14:00hrs</td>
+                    <td class="table__data">Door opened</td>
+                  </tr>
+                  <tr>
+                    <td class="table__data">09 May 2020 at 18:20hrs</td>
+                    <td class="table__data">Temperature crossed limit</td>
+                  </tr>
+                  <tr>
+                    <td class="table__data">09 May 2020 at 18:20hrs</td>
+                    <td class="table__data">Temperature crossed limit</td>
+                  </tr>
+                  <tr>
+                    <td class="table__data">09 May 2020 at 18:20hrs</td>
+                    <td class="table__data">Temperature crossed limit</td>
+                  </tr>
+                  <tr>
+                    <td class="table__data">09 May 2020 at 18:20hrs</td>
+                    <td class="table__data">Temperature crossed limit</td>
+                  </tr>
+            </table>
+          </div>
+        </div>
+
+
+
+
+
+      <!-- SECOND CHARTS ROW  -->
+        <div class="stats-row2__chart">
+        <!-- TEMPERATURE TREND LINE CHART -->
+          <div class="stats-row2__chart--1">
+              <div class="chart-heading">
+                <h3 class="chart-heading__primary">Temperature Trend</h3> 
+                <select id="freezer" class="options">
+                    <option value="Freezer 1">10min</option>
+                    <option value="Freezer 2">20min</option>
+                    <option value="Freezer 3">30min</option>
+                    <option value="Freezer 4">40min</option>
+                </select>
+              </div>
+                <canvas id="lineChart2" class="lineChart2" height="230"  aria-label="chart" role="img"  ></canvas>
+          </div>
+   
+
+
+        <!-- AVG.TEMPERATURE VS CURRENT BAR CHART -->
+          <div class="stats-row2__chart--2">
+              <div class="chart-heading">
+                <h3 class="chart-heading__primary">Avg.Temperature vs Current</h3> 
+                <select id="freezer" class="options">
+                    <option value="Freezer 1">10min</option>
+                    <option value="Freezer 2">20min</option>
+                    <option value="Freezer 3">30min</option>
+                    <option value="Freezer 4">40min</option>
+                </select>
+            </div>
+                <canvas id="barChart" class="barChart" height="230"  aria-label="chart" role="img"  ></canvas>
+          </div>
+        </div>     
+    </div>
+    </div>
+
+  
+ <script src="index.js" ></script>
+</body>
+</html>

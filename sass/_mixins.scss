@@ -1,0 +1,59 @@
+@mixin rowConfig {
+	font-size: 2rem;
+	font-family: sans-serif;
+	color: rgba(0, 0, 0, .72);
+	display: flex;
+	justify-content: center;
+}
+@mixin chartLayout {
+	background-color: #fff;
+	box-shadow: 0 0 1rem #2d5986;
+	border: 2px solid rgba(45, 89, 134, 0.5);
+	border-radius: 15px;
+	padding: 1.2rem 2rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin buttonProperty {
+	margin-left: 3rem;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	background-color: rgba(0, 0, 0, .55);
+	&:focus {
+		border: none;
+	}
+}
+
+//Media Query Manager
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == 380 {
+		@media only screen and (max-width: 23.75em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 530 {
+		@media only screen and (max-width: 33.125em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 610 {
+		@media only screen and (max-width: 38.125em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 885 {
+		@media only screen and (max-width: 55.313em) {
+			@content;
+		}
+	}
+	@if $breakpoint == 1470 {
+		@media only screen and (max-width: 91.875em) {
+			@content;
+		}
+	}
+}
